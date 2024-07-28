@@ -76,3 +76,6 @@ When we do different operations to contact, routes need to be changed accordingl
 - localhost:3000/add -> should be able to add contact
 - localhost:3000/list -> should list all contacts
 - react router helps us to navigate between different components helps us to change browser url modifies the browser history and maintains our pahe ui state without refreshing the browser
+
+reference code for TodoList:  https://www.youtube.com/watch?v=tVi6s1f1uyo
+https://github.com/learnwithjason/optimize-react-app-performance/tree/main/src

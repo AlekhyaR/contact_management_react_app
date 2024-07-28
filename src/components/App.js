@@ -9,9 +9,10 @@ import ContactDetail from "./ContactDetail";
 import EditContact from "./EditContact";
 import DeleteContact from "./DeleteContact";
 import { ContactsCrudContextProvider } from "../context/ContactsCrudContext";
+import ToDoList from "./ToDoList";
 
 function App() {
-  const [contacts, setContacts] = useState([]);                         
+  const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
     const getAllContacts = async () => {
@@ -28,16 +29,12 @@ function App() {
         <Header />
         <ContactsCrudContextProvider>
           <Routes>
-            <Route 
-              path="/" 
-              element={
-                <ContactList/>
-              } 
-            />
+            <Route path="/" element={<ContactList />} />
             <Route path="/add" element={<AddContact />} />
             <Route path="/contact/:id" element={<ContactDetail />} />
-            <Route path="/edit" element={<EditContact />} /> 
-            <Route path="/delete" element={<DeleteContact/>} />
+            <Route path="/edit" element={<EditContact />} />
+            <Route path="/delete" element={<DeleteContact />} />
+            <Route path="/todo" element={<ToDoList />} />
           </Routes>
         </ContactsCrudContextProvider>
       </Router>
